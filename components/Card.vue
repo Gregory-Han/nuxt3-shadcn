@@ -21,7 +21,7 @@ const card = props.card;
     <CardContent class="flex items-center justify-end px-4 pt-0 pb-2 border-b">
       <div class="text-[48px] font-[800]">
         <span class="text-neutral-300">$</span>
-        <span class="text-black">{{ card.amount }}</span>
+        <span class="text-gray-400">{{ card.amount.toLocaleString() }}</span>
       </div>
     </CardContent>
     <CardFooter class="flex items-center justify-between gap-2 px-2 py-2">
