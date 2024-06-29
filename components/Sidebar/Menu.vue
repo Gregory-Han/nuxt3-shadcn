@@ -1,26 +1,10 @@
 <script setup>
-const items = ref([
-  {
-    title: "Overview",
-    path: "/",
-    icon: "ri:dashboard-line"
-  }, {
-    title: "Transactions",
-    path: "/transactions",
-    icon: "lucide:arrow-left-right"
-  }, {
-    title: "Account",
-    path: "/",
-    icon: "lucide:bolt"
-  }, {
-    title: "Contacts",
-    path: "/",
-    icon: "lucide:square-user-round"
-  }, {
-    title: "Settings",
-    path: "/",
-    icon: "lucide:settings"
-  }
+const items = ref([ 
+  { title: "Overview", path: "/", icon: "ri:dashboard-line" },
+  { title: "Transactions", path: "/transactions", icon: "lucide:arrow-left-right" }, 
+  { title: "Account", path: "/", icon: "lucide:bolt" }, 
+  { title: "Contacts", path: "/", icon: "lucide:square-user-round" }, 
+  { title: "Settings", path: "/", icon: "lucide:settings" }
 ])
 </script>
 
