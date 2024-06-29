@@ -14,26 +14,6 @@ const list = [
   }
 ]
 
-let currentCategory = ref("today");
-
-function generateRandomValue(number = 7) {
-  let values = [];
-  for (let j = 0; j < number + 1; j++) {
-    values.push(Math.floor(Math.random() * 100));
-  }
-  data.value = values;
-  return values;
-}
-
-const setCategory = (e) => {
-  let v = e.target.innerText.toLowerCase();
-  currentCategory.value = v
-  if (v === 'today') generateRandomValue(24);
-  if (v === 'week') generateRandomValue(7);
-  if (v === 'month') generateRandomValue(31);
-  if (v === 'year') generateRandomValue(365);
-}
-
 const cards = [
   {
     title: "Sales",
@@ -60,6 +40,25 @@ const cards = [
     icon: "tabler:zoom-money"
   }
 ]
+let currentCategory = ref("today");
+
+function generateRandomValue(number = 7) {
+  let values = [];
+  for (let j = 0; j < number + 1; j++) {
+    values.push(Math.floor(Math.random() * 100));
+  }
+  data.value = values;
+  return values;
+}
+
+const setCategory = (e) => {
+  let v = e.target.innerText?.toLowerCase();
+  currentCategory.value = v || 'today'
+  if (v === 'today') generateRandomValue(24);
+  if (v === 'week') generateRandomValue(7);
+  if (v === 'month') generateRandomValue(31);
+  if (v === 'year') generateRandomValue(365);
+}
 
 onMounted(() => {
   generateRandomValue(24);

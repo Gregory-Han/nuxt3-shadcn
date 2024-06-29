@@ -3,7 +3,7 @@ import { h, onMounted, ref } from "vue";
 
 const data = ref<any[]>([])
 
-function generateRandomData(numObjects) {
+function generateRandomData(numObjects: number) {
   const statuses = ['pending', 'processing', 'completed'];
   const emails = ['example@gmail.com', 'm@example.com', 'test@example.com', 'user@example.com'];
   
